@@ -1,6 +1,6 @@
 
 
-Sir this is assignment is not complted fully,There were many features to implement ,but due to the shortage of time I am unable to complte the assignment fully.
+Sir this assignment is not completed fully,There were many features to implement ,but due to the shortage of time I am unable to complte the assignment fully.
 
 Sir I have created the API using db.json and I have to implent more features in this like search functionality,payment gateway ,search by categories etc.
 
