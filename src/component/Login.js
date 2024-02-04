@@ -50,8 +50,8 @@ const Login = () => {
                         <h4>Sign in to your account</h4>
                         <form onSubmit={formSubmit}>
                             <div className="form-group my-3">
-                                <label htmlFor="number">Mobile Number</label>
-                                <input type="number" className="form-control" id="number" onChange={change} placeholder="Mobile Number" autoComplete='off' />
+                                <label htmlFor="number">Email</label>
+                                <input type="email" className="form-control" id="number" onChange={change} placeholder="Mobile Number" autoComplete='off' />
                             </div>
 
                             <div className="form-group my-3">

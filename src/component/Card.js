@@ -1,7 +1,13 @@
 import React from 'react'
 
 const Card = ({ val }) => {
-    const { title, image, amount, rating } = val;
+    const { title, image, amount, rating, id } = val;
+
+
+
+
+
+
 
     return (
         <div>
@@ -18,7 +24,7 @@ const Card = ({ val }) => {
                             🤍
                         </div>
                         <div className="col-6 " >
-                            <span onClick={() => { console.log('bhi'); }}>🛒</span>
+                            <span >🛒</span>
                         </div>
 
                     </div>
