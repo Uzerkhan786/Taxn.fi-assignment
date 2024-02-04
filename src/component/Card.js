@@ -2,13 +2,6 @@ import React from 'react'
 
 const Card = ({ val }) => {
     const { title, image, amount, rating, id } = val;
-
-
-
-
-
-
-
     return (
         <div>
             <div class="card" style={{ width: "18rem", margin: '1rem' }}>

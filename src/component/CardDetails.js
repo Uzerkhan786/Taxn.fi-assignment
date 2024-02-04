@@ -16,24 +16,7 @@ const CardDetails = () => {
     }, [])
 
 
-    const fetch = async () => {
 
-        const response = await fetch('http://localhost:3001/products', {
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json",
-            },
-
-            body: JSON.stringify(product), // body data type must match "Content-Type" header
-        });
-        const json = await response.json();
-        console.log(json);
-    }
-
-    const click = () => {
-        fetch();
-    }
 
     return (<>
         {product === null ? (<Shimmer />) :
@@ -47,7 +30,7 @@ const CardDetails = () => {
                     <h1 style={{ marginBottom: '3rem' }}>$- {product.amount}</h1>
                     <div style={{ marginTop: '7rem' }}>
                         <button type="button" className="btn btn-light" style={{ width: '7rem', border: '2px solid black', marginRight: '20rem' }}>Buy Now</button>
-                        <button type="button" className="btn btn-dark" style={{ width: '7rem' }} onClick={click}>Add to Cart</button>
+                        <button type="button" className="btn btn-dark" style={{ width: '7rem' }} >Add to Cart</button>
                     </div>
                 </div>
             </div></>)}
