@@ -25,7 +25,7 @@ const Home = () => {
                         return <>
                             <div class="col-4 ">
 
-                                <Link to={item.id}> <Card key={item.id} val={item} /> </Link>
+                                <Link to={item.id} style={{ textDecoration: 'none' }}> <Card key={item.id} val={item} /> </Link>
                             </div>
                         </>
                     })}
