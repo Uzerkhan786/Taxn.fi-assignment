@@ -5,9 +5,8 @@ Sir this assignment is not completed fully,There were many features to implement
 Sir I have created the API using db.json and I have to implent more features in this like search functionality,payment gateway ,search by categories etc.
 
 
-![Screenshot (2058)](https://github.com/Uzerkhan786/Taxn.fi-assignment/assets/90555457/3449abbe-0ebe-43d1-adfb-1c7e49c5f69a)
-![Screenshot (2060)](https://github.com/Uzerkhan786/Taxn.fi-assignment/assets/90555457/91e90bee-3d8f-4efa-ae9c-682e792daefa)
 
 
-![Screenshot (2059)](https://github.com/Uzerkhan786/Taxn.fi-assignment/assets/90555457/16534498-c4a3-43c3-a11c-13c5510b4918)
-
+![Screenshot (2062)](https://github.com/Uzerkhan786/Taxn.fi-assignment/assets/90555457/2f562ac4-124e-4fe5-959b-9ccb1d7a143a)
+![Screenshot (2063)](https://github.com/Uzerkhan786/Taxn.fi-assignment/assets/90555457/ccc4666a-f457-48d0-a836-5d3203490997)
+![Screenshot (2064)](https://github.com/Uzerkhan786/Taxn.fi-assignment/assets/90555457/b296deda-ef8a-4eda-8a89-d8d583e30276)
