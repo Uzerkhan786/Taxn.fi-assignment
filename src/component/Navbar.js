@@ -2,23 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
-        // <div style={{ backgroundColor: '#16bbff', display: 'flex', justifyContent: 'space-between' }}>
-        //     <div className="logo">
-        //         Shopify
-        //     </div>
-        //     <div className="nav-items" >
-        //         <ul style={{ display: 'flex', margin: '10px' }}>
-        //             <li style={{ margin: '10px' }}>Products</li>
-        //             <li style={{ margin: '10px' }}>Logout</li>
-        //             <li style={{ margin: '10px' }}>Cart</li>
-        //         </ul>
-        //     </div>
-        // </div>
+
         <div  >
-            <nav className="navbar navbar-expand-lg " style={{ backgroundColor: '#5856d7', color: 'whitesmoke' }} >
+            <nav className="navbar navbar-expand-lg " style={{ backgroundColor: 'rgb(34 42 18)', color: 'whitesmoke' }} >
                 <div className="container-fluid">
                     <Link className="navbar-brand" to='/' style={{ color: 'white' }}>
-                        {/* <img src='' style={{ width: '170px', height: '40px', color: 'white', fontWeight: 'bold' }} alt="" /> */}
                         <h1>Shopify</h1>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +19,7 @@ const Navbar = () => {
 
                         <ul className="navbar-nav " style={{ textDecoration: 'none' }}>
                             <li className="nav-item active mx-2">
-                                <Link style={{ color: 'white', textDecoration: 'none' }} to="/products">
+                                <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
                                     <h5>Products</h5>
                                 </Link>
                             </li>

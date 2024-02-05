@@ -1,24 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Shimmer from './Shimmer';
-import { prettyDOM } from '@testing-library/react';
+import toast, { Toaster } from 'react-hot-toast';
 
-const CardDetails = () => {
+const ProductCardDetails = () => {
     const params = useParams();
     const [product, setProduct] = useState(null);
-    const f = async () => {
-        const res = await fetch('http://localhost:3001/products/' + params.id);
-        const json = await res.json();
-        setProduct(json)
-    }
+
     useEffect(() => {
-        f();
+        async function getProduct() {
+            const res = await fetch('http://localhost:3001/products/' + params.id);
+            const json = await res.json();
+            setProduct(json)
+        }
+        getProduct();
     }, [])
 
 
 
+    const click = async () => {
+        await fetch('http://localhost:3001/orders', {
+            method: 'POST',
+            body: JSON.stringify(product),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        });
+        toast.success('successfully added to the cart')
+    }
 
     return (<>
+        <div><Toaster /></div>
         {product === null ? (<Shimmer />) :
             (<><div className="row" style={{ paddingTop: '7rem' }}>
                 <div className="col-6 " style={{ margin: 'auto' }}>
@@ -30,7 +42,7 @@ const CardDetails = () => {
                     <h1 style={{ marginBottom: '3rem' }}>$- {product.amount}</h1>
                     <div style={{ marginTop: '7rem' }}>
                         <button type="button" className="btn btn-light" style={{ width: '7rem', border: '2px solid black', marginRight: '20rem' }}>Buy Now</button>
-                        <button type="button" className="btn btn-dark" style={{ width: '7rem' }} >Add to Cart</button>
+                        <button type="button" className="btn btn-dark" style={{ width: '7rem' }} onClick={click}>Add to Cart</button>
                     </div>
                 </div>
             </div></>)}
@@ -39,4 +51,4 @@ const CardDetails = () => {
     )
 }
 
-export default CardDetails
+export default ProductCardDetails

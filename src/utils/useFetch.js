@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const useFetch = async () => {
+const useFetch = () => {
     const [products, setProducts] = useState(null);
-    const res = await fetch('http://localhost:3000/products');
-    const json = await res.json();
-    setProducts(json.products);
+    useEffect(() => {
+        fetch();
+    }, [])
+    const fetch = async () => {
+        const res = await fetch('https://dummyjson.com/products');
+        const json = await res.json();
+        setProducts(json)
+    }
+    console.log(products);
     return products;
 }
+
 
 export default useFetch

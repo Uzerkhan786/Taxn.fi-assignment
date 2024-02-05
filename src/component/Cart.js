@@ -1,29 +1,30 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import CartDetails from './CartDetails';
 const Cart = () => {
+    const [cart, setCart] = useState(null);
+    const allOrder = async () => {
+        const res = await fetch('http://localhost:3001/orders');
+        const json = await res.json();
+        setCart(json)
+
+    }
+    useEffect(() => {
+        allOrder();
+    }, [])
+
     return (
-        <div>
-            <div class="card" style={{ width: "18rem", margin: '1rem' }}>
-                <img src='' style={{ width: '18rem', height: '12rem' }} alt="" />
-                <div className="card-body">
-                    <p className="card-title"></p>
-                    <h6 className="card-subtitle mb-2 text-body-secondary"> $</h6>
-                    <div className="rating text-center"
-                        style={{ height: '2rem', width: '3rem', color: 'white', backgroundColor: 'green', borderRadius: '5px' }}
-                    ></div>
-                    <div className="row " style={{ marginTop: '2rem' }}>
-                        <div className="col-6">
-                            🤍
-                        </div>
-                        <div className="col-6 " >
-                            <span onClick={() => { console.log('bhi'); }}>🛒</span>
-                        </div>
 
-                    </div>
 
-                </div>
-            </div>
+        <div className="row my-4 m-auto">
+            {cart?.map((item) => {
+                return <><div className="col-12">
+                    <CartDetails val={item} />
+                </div></>
+            })}
         </div>
+
+
+
     )
 }
 

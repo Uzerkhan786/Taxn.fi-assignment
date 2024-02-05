@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Card = ({ val }) => {
-    const { title, image, amount, rating, id } = val;
+const ProductCard = ({ val }) => {
+    const { title, image, amount, rating } = val;
     return (
         <div>
             <div class="card" style={{ width: "18rem", margin: '1rem' }}>
@@ -28,4 +28,4 @@ const Card = ({ val }) => {
     )
 }
 
-export default Card
+export default ProductCard

@@ -10,16 +10,12 @@ const Login = () => {
     });
 
     const loginFun = async () => {
-        const response = await fetch('https://daily-wager.onrender.com/api/v1/user/signin', {
+        const response = await fetch('http://localhost:3001/login', {
             method: 'POST',
-            body: JSON.stringify({
-                mobileNumber: user.number,
-                password: user.password
-            }),
+            body: JSON.stringify(user),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             }
-
         });
         const json = await response.json();
         localStorage.setItem('userId', json.data._id)
@@ -51,7 +47,7 @@ const Login = () => {
                         <form onSubmit={formSubmit}>
                             <div className="form-group my-3">
                                 <label htmlFor="number">Email</label>
-                                <input type="email" className="form-control" id="number" onChange={change} placeholder="Mobile Number" autoComplete='off' />
+                                <input type="email" className="form-control" id="number" onChange={change} placeholder="Email" autoComplete='off' />
                             </div>
 
                             <div className="form-group my-3">
